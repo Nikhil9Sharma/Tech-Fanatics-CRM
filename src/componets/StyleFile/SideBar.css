@@ -21,12 +21,13 @@
 }
 
 /* SIDEBAR SECTION */
-section {
+.SideBar-Main-Container {
   width: 240px;
-  height: 100vh;
+  height: 100%;
   background: var(--sidebar-bg);
   font-family: var(--font-main);
   display: flex;
+  position: sticky;
   flex-direction: column;
   justify-content: space-between;
 }

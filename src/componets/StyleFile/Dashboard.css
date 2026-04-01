@@ -1,23 +1,30 @@
-
 /* LAYOUT */
 .shell {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
 }
+
 /* MAIN */
 .main {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-width: 0; /* prevents overflow issues */
 }
 
 /* TOPBAR */
 .topbar {
+  width: 100%;
   background: var(--card);
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* prevents breaking */
+  gap: 10px;
   border-bottom: 1px solid var(--border);
+  border-radius: 0 0 10px 10px;
 }
 
 /* BUTTON */
@@ -28,25 +35,29 @@
   padding: 8px 14px;
   cursor: pointer;
   border-radius: 6px;
+  white-space: nowrap;
 }
 
 /* CONTENT */
 .content {
   padding: 20px;
+  width: 100%;
 }
 
-/* METRICS */
+/* METRICS (AUTO RESPONSIVE GRID 🔥) */
 .metrics {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
 }
 
+/* CARD */
 .card {
   background: var(--card);
   padding: 15px;
   border-radius: 10px;
   border: 1px solid var(--border);
+  min-width: 0;
 }
 
 .value {
@@ -63,8 +74,16 @@
   border: 1px solid var(--border);
 }
 
+/* IMPORTANT: prevents table breaking */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* TABLE STYLE */
 table {
   width: 100%;
+  min-width: 500px; /* keeps structure intact */
   border-collapse: collapse;
 }
 
@@ -72,13 +91,15 @@ th, td {
   padding: 10px;
   border-top: 1px solid var(--border);
   text-align: left;
+  white-space: nowrap;
 }
 
 /* BADGES */
 .badge {
-  padding: 4px 8px;
+  padding: 4px 10px;
   border-radius: 10px;
   font-size: 12px;
+  display: inline-block;
 }
 
 .green {
@@ -94,4 +115,54 @@ th, td {
 .blue {
   background: #EBF2FF;
   color: var(--blue);
+}
+
+/* ========================= */
+/* 🔽 RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .content {
+    padding: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .value {
+    font-size: 18px;
+  }
+}
+
+/* Large Screens / TV */
+@media (min-width: 1440px) {
+  .content {
+    padding: 40px;
+  }
+
+  .value {
+    font-size: 28px;
+  }
+
+  th, td {
+    padding: 14px;
+  }
 }

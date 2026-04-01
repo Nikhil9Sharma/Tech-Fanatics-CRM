@@ -1,46 +1,78 @@
-/* ROOT VARIABLES */
-:root {
-  --app-bg: #F4F6FA;
-  --content-bg: #FFFFFF;
-  --border: #E1E6F0;
-  --text: #0D1117;
-}
-
-/* RESET */
+/* Reset (IMPORTANT for consistency) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* MAIN CONTAINER */
-.Main-App-Container {
+/* Main Layout */
+.app-container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh; /* full screen height */
   width: 100%;
-  background: var(--app-bg);
 }
 
-/* SIDEBAR (LEFT) */
-.Main-App-Container > *:first-child {
-  width: 240px;          /* Sidebar width */
-  flex-shrink: 0;        /* Prevent shrinking */
+/* Sidebar */
+.sidebar {
+  width: 250px; /* fixed sidebar */
+  background: #1e2e42;
+  color: white;
+  transition: all 0.3s ease;
 }
 
-/* CONTENT (RIGHT) */
-.Main-App-Container > *:last-child {
-  flex: 1;               /* Take remaining space */
-  background: var(--content-bg);
-  border-left: 1px solid var(--border);
-  overflow-y: auto;
+/* Content */
+.content {
+  flex: 1; /* takes remaining space */
+  padding: 20px;
+  background: #f5f2ec;
 }
 
-/* OPTIONAL: SCROLLBAR FOR CONTENT */
-.Main-App-Container > *:last-child::-webkit-scrollbar {
-  width: 6px;
+/* ========================= */
+/* 📱 MOBILE (<= 768px) */
+/* ========================= */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* stack vertically */
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .content {
+    width: 100%;
+  }
 }
 
-.Main-App-Container > *:last-child::-webkit-scrollbar-thumb {
-  background: #CBD5F5;
-  border-radius: 10px;
+/* ========================= */
+/* 📟 TABLET (769px - 1024px) */
+/* ========================= */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+/* ========================= */
+/* 💻 LARGE SCREENS (1200px+) */
+/* ========================= */
+@media (min-width: 1200px) {
+  .sidebar {
+    width: 280px;
+  }
+
+  .content {
+    padding: 40px;
+  }
+}
+
+/* ========================= */
+/* 📺 EXTRA LARGE / TV */
+/* ========================= */
+@media (min-width: 1600px) {
+  .app-container {
+    max-width: 1400px;
+    margin: auto;
+  }
 }

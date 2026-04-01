@@ -3,7 +3,7 @@ import "./StyleFile/SideBar.css";
 export default function SideBar() {
   return (
     <>
-      <section>
+      <section className="SideBar-Main-Container">
         <div>
           <div className="Logo-Area">
             <div className="">
