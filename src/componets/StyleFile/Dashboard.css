@@ -1,0 +1,97 @@
+
+/* LAYOUT */
+.shell {
+  display: flex;
+  height: 100vh;
+}
+/* MAIN */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOPBAR */
+.topbar {
+  background: var(--card);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+
+/* BUTTON */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* CONTENT */
+.content {
+  padding: 20px;
+}
+
+/* METRICS */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.card {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.value {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* TABLE */
+.table-card {
+  margin-top: 20px;
+  background: var(--card);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-top: 1px solid var(--border);
+  text-align: left;
+}
+
+/* BADGES */
+.badge {
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.green {
+  background: #DCFCE7;
+  color: var(--green);
+}
+
+.amber {
+  background: #FEF3C7;
+  color: var(--amber);
+}
+
+.blue {
+  background: #EBF2FF;
+  color: var(--blue);
+}

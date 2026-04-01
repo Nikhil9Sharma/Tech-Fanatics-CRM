@@ -1,0 +1,143 @@
+/* ROOT VARIABLES (Design System) */
+:root {
+  --sidebar-bg: #0F172A;
+  --sidebar-text: #94A3B8;
+  --sidebar-active: #FFFFFF;
+
+  --primary: #1A6BFF;
+  --hover-bg: rgba(255, 255, 255, 0.06);
+
+  --text-main: #0D1117;
+  --border: rgba(255, 255, 255, 0.08);
+
+  --font-main: "DM Sans", sans-serif;
+}
+
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SIDEBAR SECTION */
+section {
+  width: 240px;
+  height: 100vh;
+  background: var(--sidebar-bg);
+  font-family: var(--font-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* LOGO AREA */
+.Logo-Area {
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.Logo {
+  width: 30px;
+  height: 30px;
+  background: var(--primary);
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.Logo-Text {
+  display: flex;
+  flex-direction: column;
+}
+
+.Logo-Name {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* CONTENT AREA */
+.Content-Area {
+  padding: 15px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* SECTION HEADINGS */
+.Overview-Section-Area,
+.Operations-Section-Area,
+.Programs-Section-Area,
+.Admin-Section-Area {
+  color: #64748B;
+  font-size: 11px;
+  margin: 15px 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* BUTTON CONTAINER */
+.Button-Container {
+  margin-bottom: 10px;
+}
+
+/* BUTTON BASE */
+button {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  border: none;
+  background: transparent;
+  color: var(--sidebar-text);
+  font-size: 13px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* HOVER EFFECT */
+button:hover {
+  background: var(--hover-bg);
+  color: white;
+}
+
+/* ACTIVE BUTTON */
+#Dashboard-Button {
+  background: rgba(26, 107, 255, 0.2);
+  color: var(--sidebar-active);
+  font-weight: 500;
+}
+
+/* GROUP BUTTON STYLES */
+.Overview-Button {}
+.Operations-Button {}
+.Programs-Button {}
+.Admin-Button {}
+
+/* FOOTER AREA */
+.Footer-Area {
+  padding: 15px;
+  border-top: 1px solid var(--border);
+}
+
+/* USER INFO */
+.User-Name {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.User-Email {
+  color: var(--sidebar-text);
+  font-size: 11px;
+}
+
+/* OPTIONAL: SCROLLBAR */
+.Content-Area::-webkit-scrollbar {
+  width: 5px;
+}
+
+.Content-Area::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
