@@ -1,0 +1,155 @@
+/* ROOT */
+:root {
+  --primary: #1A6BFF;
+  --bg: #F4F6FA;
+  --card: #FFFFFF;
+  --text: #0D1117;
+  --border: #E1E6F0;
+
+  --green: #16A34A;
+  --red: #DC2626;
+
+  --radius: 10px;
+  --shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* CONTAINER */
+.dealer-container {
+  padding: 20px;
+  background: var(--bg);
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* TITLE */
+.dealer-container h2 {
+  margin-bottom: 20px;
+}
+
+/* ========================= */
+/* ✅ FORM FIX (IMPORTANT) */
+/* ========================= */
+.dealer-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.dealer-form input,
+.dealer-form select,
+.dealer-form button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.dealer-form button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ========================= */
+/* ✅ TABLE FIX */
+/* ========================= */
+.dealer-table {
+  background: var(--card);
+  padding: 15px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* 🔥 KEY FIX */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  min-width: 500px; /* prevents breaking */
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 10px;
+  font-size: 12px;
+}
+
+td {
+  padding: 10px;
+  border-top: 1px solid var(--border);
+  white-space: nowrap; /* keeps row clean */
+}
+
+/* BADGES */
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.active {
+  background: #DCFCE7;
+  color: var(--green);
+}
+
+.inactive {
+  background: #FEE2E2;
+  color: var(--red);
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .dealer-container {
+    padding: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dealer-container {
+    padding: 10px;
+  }
+
+  .dealer-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  th, td {
+    padding: 8px;
+  }
+
+  .badge {
+    font-size: 11px;
+  }
+}
+
+/* 🖥️ Large Screens / TV */
+@media (min-width: 1440px) {
+  .dealer-container {
+    padding: 40px;
+  }
+
+  th, td {
+    padding: 14px;
+  }
+
+  .badge {
+    font-size: 14px;
+  }
+}

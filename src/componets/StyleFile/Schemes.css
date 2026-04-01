@@ -1,0 +1,96 @@
+:root {
+  --primary: #1A6BFF;
+  --bg: #F4F6FA;
+  --card: #FFFFFF;
+  --text: #0D1117;
+  --border: #E1E6F0;
+
+  --green: #16A34A;
+  --amber: #D97706;
+  --red: #DC2626;
+
+  --radius: 12px;
+}
+
+/* PAGE */
+.scheme-container {
+  padding: 20px;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* CARD */
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* BUTTON */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  text-align: left;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+td {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* BADGES */
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.green {
+  background: #DCFCE7;
+  color: var(--green);
+}
+
+.amber {
+  background: #FEF3C7;
+  color: var(--amber);
+}
+
+.red {
+  background: #FEE2E2;
+  color: var(--red);
+}

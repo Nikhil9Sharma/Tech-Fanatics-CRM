@@ -1,0 +1,97 @@
+:root {
+  --primary: #1A6BFF;
+  --bg: #F4F6FA;
+  --card: #FFFFFF;
+  --text: #0D1117;
+  --border: #E1E6F0;
+
+  --green: #16A34A;
+  --amber: #D97706;
+  --blue: #1A6BFF;
+}
+
+.lead-container {
+  padding: 20px;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/* HEADER */
+.lead-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.lead-header input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* FORM */
+.lead-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lead-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.lead-form button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* TABLE */
+.lead-table {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  font-size: 13px;
+  color: gray;
+}
+
+td {
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+}
+
+/* BADGES */
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.new {
+  background: #EBF2FF;
+  color: var(--blue);
+}
+
+.contacted {
+  background: #FEF3C7;
+  color: var(--amber);
+}
+
+.converted {
+  background: #DCFCE7;
+  color: var(--green);
+}

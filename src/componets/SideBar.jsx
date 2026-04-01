@@ -43,13 +43,6 @@ export default function SideBar() {
                   <button className="Programs-Button" id="Complaints-Button">Complaints</button>
                   </div>
               </div>
-              <div className="">
-                <p className="Admin-Section-Area">Admin</p>
-                <div className="">
-                  <button className="Admin-Button" id="Sales-Team-Button">Sales Team</button>
-                  <button className="Admin-Button" id="Roles-&-Access-Button">Roles & Access</button>
-                </div>
-              </div>
             </div>
             <div className="Footer-Area">
               <div className="">

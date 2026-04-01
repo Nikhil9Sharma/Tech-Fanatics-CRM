@@ -26,6 +26,13 @@
   border-bottom: 1px solid var(--border);
   border-radius: 0 0 10px 10px;
 }
+.topbar button {
+    max-width: 100px;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
 
 /* BUTTON */
 .btn-primary {
