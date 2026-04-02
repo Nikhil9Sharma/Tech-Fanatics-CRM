@@ -1,5 +1,8 @@
 import React from "react";
 import "./StyleFile/SideBar.css";
+
+import Dasboard from "./Dashboard";
+import {Link } from "react-router-dom";
 export default function SideBar() {
   return (
     <>
@@ -17,7 +20,9 @@ export default function SideBar() {
             <div className="">
               <p className="Overview-Section-Area">OverView</p>
               <div className="Button-Container">
-                <button className="Overview-Button" id="Dashboard-Button">DashBoard</button>
+                <button className="Overview-Button" id="Dashboard-Button">
+                  <Link to="/Dashboard">Dashboard</Link>
+                </button>
               </div>
             </div>
             <div className="">
@@ -47,8 +52,8 @@ export default function SideBar() {
             <div className="Footer-Area">
               <div className="">
                 <div className=""><img src="" alt="" /></div>
-                <div className=""><p className="User-Name">John Doe</p>
-                <p className="User-Email">john.doe@example.com</p></div>
+                <div className=""><p className="User-Name">Nikhil Sharma</p>
+                <p className="User-Email">nikhilsharma@example.com</p></div>
               </div>
             </div>
           </div>

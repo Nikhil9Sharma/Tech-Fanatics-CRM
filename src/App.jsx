@@ -1,20 +1,12 @@
-import React from "react";
-import "./App.css";
-import SideBar from "./componets/SideBar";
-import SidebarContent from "./componets/SidebarContent";
+import { BrowserRouter } from "react-router-dom";
+import SideBar from "./components/SideBar";
 
-export default function App() {
+function App() {
   return (
-    <div className="app-container">
-      {/* Sidebar */}
-      <aside className="sidebar">
-        <SideBar />
-      </aside>
-
-      {/* Main Content */}
-      <main className="content">
-        <SidebarContent />
-      </main>
-    </div>
+    <BrowserRouter>
+      <SideBar />
+    </BrowserRouter>
   );
 }
+
+export default App;
